@@ -202,7 +202,7 @@ header .container ul li:nth-child(4):hover+.hidden{
 }
 /* article section start */
 .articles .container,.gallery .container,.features .container,.testimonials .container,
-.team-members .container,.services .container{
+.team-members .container,.services .container,.our-skills .container{
     margin: auto;
     width: 1170px;
     padding: 120px 18px;
@@ -756,6 +756,65 @@ header .container ul li:nth-child(4):hover+.hidden{
     justify-content: center;
 }
 /* services section end */
+/* our-skills section start */
+.our-skills .container .card-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.our-skills .container .card-container .meters-container>*{
+    margin: 10px 0;
+}
+.our-skills .container .card-container .meters-container .meter-container{
+    display: grid;
+    grid-row: 1fr 1fr;
+    grid-template-columns: auto ;
+    gap: 10px;
+}
+.our-skills .container .card-container .meters-container .meter-container .info{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.our-skills .container .card-container .meters-container .meter-container .info p{
+    font-family: "Cairo", sans-sarif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.our-skills .container .card-container .meters-container .meter-container .info p:last-of-type{
+    font-size: 11px;
+    color: #2196f3;
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+    height: fit-content;
+    padding:0 5px;
+    position: absolute;
+    left: 80%;
+    transform: translate(-50%);
+}
+.our-skills .container .card-container .meters-container .meter-container:nth-child(2) .info p:last-of-type{
+    left: 85%;
+}
+.our-skills .container .card-container .meters-container .meter-container:nth-child(3) .info p:last-of-type{
+    left: 70%;
+}
+.our-skills .container .card-container .meters-container .meter-container .meter{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    background-color: rgb(236, 236, 236);
+}
+.our-skills .container .card-container .meters-container .meter-container .front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #2196f3;
+    transition: width 1s;
+}
+
+/* ourt-skills section end */
 
 
 @keyframes arrow-right{
@@ -800,7 +859,8 @@ header .container ul li:nth-child(4):hover+.hidden{
     .features .container,
     .testimonials .container,
     .team-members .container,
-    .services .container{
+    .services .container,
+    .our-skills .container{
         width: 970px;
     }
     .articles .container .card-container{
@@ -878,7 +938,8 @@ header .container ul li:nth-child(4):hover+.hidden{
     .features .container,
     .testimonials .container,
     .team-members .container,
-    .services .container{
+    .services .container,
+    .our-skills .container{
         width: 770px;
     }
     .articles .container .card-container{
@@ -897,6 +958,14 @@ header .container ul li:nth-child(4):hover+.hidden{
         grid-template-rows: 1fr 1fr 1fr;
     }
     /* services section end */
+    /* our-skills section start */
+    .our-skills .container .card-container img{
+        display: none;
+    }
+    .our-skills .container .card-container {
+        grid-template-columns: 1fr;
+    }
+    /* our-skills section end */
 }
 @media (max-width:790px){
     /*header start*/
@@ -982,7 +1051,8 @@ header .container ul li:nth-child(4):hover+.hidden{
     /* testimonials section start */
     .testimonials .container,
     .team-members .container,
-    .services .container{
+    .services .container,
+    .our-skills .container{
         width: 100%;
     }
     .testimonials .container .card-container{
