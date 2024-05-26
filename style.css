@@ -1142,11 +1142,23 @@ input:focus::placeholder {
     list-style: none;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 .top-videos .container .card-container .video-list ul li{
     padding: 14px 20px;
-}.top-videos .container .card-container .video-list ul li p{
+    transition: background-color 0.3s;
+}
+.top-videos .container .card-container .video-list ul li:hover{
+    background-color: #f4f4f4;
+}
+.top-videos .container .card-container .video-list ul li p{
     font-family: "Cairo",sans-serif;
+}
+.top-videos .container .card-container .video-list ul li .video-title{
+    transition: color 0.3s;
+}
+.top-videos .container .card-container .video-list ul li:hover .video-title{
+    color:#2196f3;
 }
 .top-videos .container .card-container .video-list ul li .video-time{
     color: #777;
