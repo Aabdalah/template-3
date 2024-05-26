@@ -110,3 +110,13 @@ setInterval(() => {
 //         console.log(JSON.parse(myRequest.response)["public_repos"])
 //     }
 // }
+const section = document.querySelector(".stats")
+const options = {}
+const observer = new IntersectionObserver((entries)=>{
+    if(entries[0].isIntersecting){
+        
+    }
+},options)
+observer.observe(section)
+
+const numbers = document.querySelectorAll(".number");

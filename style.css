@@ -204,7 +204,7 @@ header .container ul li:nth-child(4):hover+.hidden{
 .articles .container,.gallery .container,.features .container,.testimonials .container,
 .team-members .container,.services .container,.our-skills .container,
 .how-it-works .container, .latest-events .container,.pricing-plans .container,
-.top-videos .container{
+.top-videos .container,.stats .container{
     margin: auto;
     width: 1170px;
     padding: 120px 18px;
@@ -1182,7 +1182,72 @@ input:focus::placeholder {
     padding: 15px 20px;
 }
 /* top-videos section end */
+/* stats section start */
+.stats{
+    background-image: linear-gradient(rgb(255 255 255 / 95%), rgb(255 248 248 / 95%)), url("imgs/stats.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.stats .container h2{
+    font-family: "Cairo",sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+.stats .container{
+    gap: 30px;
+    padding: 80px 0;
+}
+.stats .container .card-container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+}
 
+.stats .container .card-container .card{
+    min-width: 275px;
+    min-height: 195px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    position: relative;
+}
+.stats .container .card-container .card::before,
+.stats .container .card-container .card::after{
+    content: "";
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 0;
+    width: 2px;
+    background-color: #2196f3;
+    transition: height 1s;
+}
+.stats .container .card-container .card::after{
+    left: 100%;
+    top: unset;
+    bottom: 0;
+}
+.stats .container .card-container .card:hover::before,
+.stats .container .card-container .card:hover::after{
+    height: 100%;
+}
+.stats .container .card-container .card .number{
+    font-size: 50px;
+    font-family: "Cairo",sans-serif;
+    font-weight: bold;
+}
+.stats .container .card-container .card .counter-name{
+    font-size: 20px;
+    font-family: "Cairo",sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #2196f3;
+}
+/* stats section end */
 @keyframes arrow-right{
     0%{
         left:0;
@@ -1230,7 +1295,8 @@ input:focus::placeholder {
     .how-it-works .container,
     .latest-events .container,
     .pricing-plans .container,
-    .top-videos .container{
+    .top-videos .container,
+    .stats .container{
         width: 970px;
     }
     .articles .container .card-container{
@@ -1284,6 +1350,11 @@ input:focus::placeholder {
         top: 0;
     }
     /*latest-events section end*/
+    /*stats section start*/
+    .stats .container .card-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    /*stats section end*/
 }
 @media (max-width:990px) {
     /*header start*/
@@ -1328,7 +1399,8 @@ input:focus::placeholder {
     .how-it-works .container,
     .latest-events .container,
     .pricing-plans .container,
-    .top-videos .container{
+    .top-videos .container,
+    .stats .container{
         width: 770px;
     }
     .articles .container .card-container{
@@ -1376,6 +1448,10 @@ input:focus::placeholder {
         gap: 10px;
     }
     /* top-videos section end */
+    .stats .container .card-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /*stats section end*/
 }
 @media (max-width:790px){
     /*header start*/
@@ -1466,7 +1542,8 @@ input:focus::placeholder {
     .how-it-works .container,
     .latest-events .container,
     .pricing-plans .container,
-    .top-videos .container{
+    .top-videos .container,
+    .stats .container{
         width: 100%;
     }
     .testimonials .container .card-container{
@@ -1525,6 +1602,17 @@ input:focus::placeholder {
         grid-template-rows: 1fr 1fr 1fr;
     }
     /*.pricing-plans section end*/
+    /* top-videos section end */
+    .stats .container .card-container{
+        grid-template-columns: auto;
+        width: calc(100% - 36px);
+
+    }
+    .stats .container .card-container .card{
+        min-width: unset ;
+        min-height: unset ;
+    }
+    /*stats section end*/
 }
 
 @keyframes menusmall{
