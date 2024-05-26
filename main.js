@@ -94,3 +94,19 @@ setInterval(() => {
     }
     
 }, 1000);
+
+
+// let myRequest = new XMLHttpRequest();
+
+// myRequest.open("GET","https://api.github.com/users/Aabdalah");
+
+// myRequest.send();
+
+
+// myRequest.onreadystatechange = ()=>{
+//     if(myRequest.readyState == 4 && myRequest.status == 200){
+//         console.log(JSON.parse(myRequest.response))
+//         console.log(JSON.parse(myRequest.response)["created_at"])
+//         console.log(JSON.parse(myRequest.response)["public_repos"])
+//     }
+// }
