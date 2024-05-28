@@ -111,12 +111,46 @@ setInterval(() => {
 //     }
 // }
 const section = document.querySelector(".stats")
-const options = {}
+const options = {
+    root:null,
+    threshold:0.5
+}
+const numbers = document.querySelectorAll(".stats .container .card-container .card .number");
 const observer = new IntersectionObserver((entries)=>{
     if(entries[0].isIntersecting){
-        
+        if(numbers[0].textContent == 0){
+            let int = setInterval(() => {
+                numbers[0].textContent++
+                if(numbers[0].textContent == 150){
+                    clearInterval(int);
+                }
+            }, 10);
+        }
+        if(numbers[1].textContent == 0){
+            let int1 = setInterval(() => {
+                numbers[1].textContent++
+                if(numbers[1].textContent == 135){
+                    clearInterval(int1);
+                }
+            }, 10);
+        }
+        if(numbers[2].textContent == 0){
+            let int2 = setInterval(() => {
+                numbers[2].textContent++
+                if(numbers[2].textContent == 50){
+                    clearInterval(int2);
+                }
+            }, 40);
+        }
+        if(numbers[3].textContent == 0){
+            let int3 = setInterval(() => {
+                numbers[3].textContent++
+                if(numbers[3].textContent == 500){
+                    clearInterval(int3);
+                }
+            }, 0);
+        }
     }
 },options)
 observer.observe(section)
 
-const numbers = document.querySelectorAll(".number");
