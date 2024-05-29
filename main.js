@@ -110,10 +110,10 @@ setInterval(() => {
 //         console.log(JSON.parse(myRequest.response)["public_repos"])
 //     }
 // }
-const section = document.querySelector(".stats")
+const section = document.querySelector(".stats .container .card-container .card")
 const options = {
     root:null,
-    threshold:0.5
+    threshold:1
 }
 const numbers = document.querySelectorAll(".stats .container .card-container .card .number");
 const observer = new IntersectionObserver((entries)=>{
