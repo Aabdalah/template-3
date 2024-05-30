@@ -1350,7 +1350,7 @@ input:focus::placeholder {
 }
 /* discount section end */
 /* footer section start */
-.footer{
+body>.footer{
     background-color: #191919;
     color: #b9b9b9;
 }
